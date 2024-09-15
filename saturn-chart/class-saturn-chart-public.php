@@ -65,17 +65,8 @@ class Saturn_Chart_Public
     {
         
         /**
-         * This function is provided for demonstration purposes only.
-         *
-         * An instance of this class should be passed to the run() function
-         * defined in Saturn_Chart_Loader as all of the hooks are defined
-         * in that particular class.
-         *
-         * The Saturn_Chart_Loader will then create the relationship
-         * between the defined hooks and the functions defined in this
-         * class.
+         * Enqueue the plugin's main stylesheet and Bootstrap.
          */
-        
         wp_enqueue_style($this->plugin_name, plugin_dir_url(__FILE__) . 'css/saturn-chart-public.css', array(), $this->version, 'all');
 		wp_enqueue_style($this->plugin_name.'bootstrap', plugin_dir_url(__FILE__) . 'css/bootstrap.min.css', array(), '3.3.7', 'all');
         
@@ -88,17 +79,8 @@ class Saturn_Chart_Public
      */
     public function enqueue_scripts()
     {
-        
-        /**
-         * This function is provided for demonstration purposes only.
-         *
-         * An instance of this class should be passed to the run() function
-         * defined in Saturn_Chart_Loader as all of the hooks are defined
-         * in that particular class.
-         *
-         * The Saturn_Chart_Loader will then create the relationship
-         * between the defined hooks and the functions defined in this
-         * class.
+       /**
+         * Enqueue the plugin's main JavaScript file, Chart.js, and Bootstrap JS.
          */
         
         wp_enqueue_script($this->plugin_name, plugin_dir_url(__FILE__) . 'js/saturn-chart-public.js', array(
@@ -111,7 +93,13 @@ class Saturn_Chart_Public
         ), '3.3.7', false);
         
     }
-    
+   
+	/**
+     * Import CSV data into an associative array.
+     *
+     * @param string $filename The file path to the CSV.
+     * @return array $results The parsed CSV data.
+     */
     function ImportCSV2Array($filename)
     {
         $row = 0;
@@ -139,7 +127,12 @@ class Saturn_Chart_Public
         
         return $results;
     }
-    
+	
+      /**
+     * Generate shortcode for displaying Net International Reserves chart.
+     *
+     * @return string The HTML and JavaScript for the chart.
+     */
     public function nir_shortcode()
     {
 ?>
@@ -224,7 +217,11 @@ class Saturn_Chart_Public
     }
     
     
-    
+    /**
+     * Generate shortcode for displaying Unemployment Rate chart.
+     *
+     * @return string The HTML and JavaScript for the chart.
+     */
     public function unemployment_shortcode()
     {
 ?>
@@ -312,8 +309,13 @@ class Saturn_Chart_Public
 		<?php
     }
     
-    
-    
+     
+
+    /**
+     * Register the shortcodes for inflation_shortcode() charts.
+     *
+     * @since    1.0.0
+     */
     public function inflation_shortcode()
     {
 ?>
@@ -403,7 +405,11 @@ class Saturn_Chart_Public
     }
     
     
-    
+      /**
+     * Register the shortcodes for GDP_shortcode() charts.
+     *
+     * @since    1.0.0
+     */
     public function GDP_shortcode()
     {
 ?>
@@ -593,9 +599,14 @@ class Saturn_Chart_Public
     }
     
     
-    
+    /**
+     * Register the shortcodes for various economic charts.
+     *
+     * @since    1.0.0
+     */
     public function satbsqt_shortcode_registration()
     {
+        // Register each shortcode with corresponding function
         add_shortcode('NIR', array(
             $this,
             'nir_shortcode'
