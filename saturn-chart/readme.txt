@@ -12,7 +12,7 @@ The Saturn chart plugin uses shortcodes to display various graphs from csv files
 
 == Description ==
 
-The Saturn chart plugin uses CSV or TXT file formats to display stock data trhough graphs. This is a custom plugin developed for mayberryinvestments by BSQUADT.com
+The Saturn chart plugin uses CSV or TXT file formats to display stock data trhough graphs. This is a custom plugin developed for mayberryinvestments by vroper
 
 
 Features:
@@ -34,7 +34,7 @@ This section describes how to install the plugin and get it working.
 
 e.g.
 
-1. Upload `saturn-chart.php` to the `/wp-content/plugins/` directory
+1. Upload `saturn-chart` to the `/wp-content/plugins/` directory
 1. Activate the plugin through the 'Plugins' menu in WordPress
 
 == Changelog ==
