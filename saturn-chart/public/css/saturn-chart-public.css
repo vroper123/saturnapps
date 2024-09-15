@@ -1,0 +1,80 @@
+/**
+ * All of the CSS for your public-facing functionality should be
+ * included in this file.
+ */
+ .chart-legend span{
+    display: inline-flex;
+    width: 20px;
+	 list-style-type: none !important;
+    height: 3px;
+    margin-right: 5px;
+}
+.chart-legend ul{
+	text-align:center;
+	display: inline-flex !important;
+	list-style:none;
+}
+.chart-legend ul li{
+	padding:10px
+}
+.chart-legend{
+	display: inline;
+}
+.chart-container{
+    padding: 10px;
+}
+ .saturn-title{
+     margin:0;
+     padding: 10px;
+     color: white !important;
+     background:#3C4694;
+     text-align: center;
+     font-weight:bold !important;
+ }
+ #sat-box2{
+	 width:520px;
+ }
+  #no-wr{
+	  
+	  white-space:nowrap;
+  }
+ .saturn-box{
+         
+         border:1px solid #3C4694;
+ }
+ 
+ .tp{
+	     top: -30px;
+	 
+ }
+ 
+ .table {
+   display: block !important;
+}
+
+
+@media only screen and (max-width: 600px) {
+    #sat-box2{
+	 width:auto;
+ }
+	
+	#no-wr{
+	  
+	  white-space:normal;
+  }
+}
+
+
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  
+  #sat-box2{
+	 width:auto;
+ }
+	
+	#no-wr{
+	  
+	  white-space:normal;
+  }
+  
+}
